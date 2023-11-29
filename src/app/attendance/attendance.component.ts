@@ -14,4 +14,5 @@ export class AttendanceComponent {
   this.router.navigate(['/face-recognised']);
   }
 
+
 }

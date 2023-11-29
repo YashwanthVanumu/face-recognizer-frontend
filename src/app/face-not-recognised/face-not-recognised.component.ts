@@ -8,12 +8,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./face-not-recognised.component.css']
 })
 export class FaceNotRecognisedComponent {
+  image="../assets/astreya-logo-white.svg"
   img1="../assets/face_not_recognised.png"
   constructor(private router: Router) {}
   onsave(){
 
     this.router.navigate(['/popup']);
     }
-
 
 }

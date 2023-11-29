@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { tr } from 'date-fns/locale';
 
 @Component({
   selector: 'app-welcome-admin',
@@ -8,6 +9,9 @@ import { Router } from '@angular/router';
 })
 export class WelcomeAdminComponent {
   bell_icon="&#x1F514"
+  bell="../assets/bell_icon1.jpg"
+  boy_icon="../assets/user-icon.png"
+  details: boolean = false;
   constructor(private router: Router) {}
   onsave(){
 
@@ -25,6 +29,26 @@ export class WelcomeAdminComponent {
 
         this.router.navigate(['/list_attendance']);
         }
-    
+        onsave4(){
 
-}
+          this.router.navigate(['/attendance-management']);
+          }
+          showNotification() {
+            this.details = !this.details
+            if (this.details == true)
+            {
+              const admindetails = document.getElementById('admin-details') as HTMLDivElement;
+              admindetails.style.display = 'block';
+            }
+            else{
+              this.hideNotification();
+            }
+        
+          }
+         hideNotification() {
+           // Hide the notification box
+           const admindetails = document.getElementById('admin-details') as HTMLDivElement;
+           admindetails.style.display = 'none';
+         }
+  }
+

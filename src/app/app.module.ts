@@ -25,6 +25,10 @@ import { FullCalendarModule } from '@fullcalendar/angular';
 
 import { SentRequestComponent } from './sent-request/sent-request.component';
 import { RegularizeAttendanceComponent } from './regularize-attendance/regularize-attendance.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CalendarModule } from 'angular-calendar';
+import { AttendanceManagementComponent } from './attendance-management/attendance-management.component';
+import { MarkLeaveComponent } from './mark-leave/mark-leave.component';
 
 
 
@@ -50,6 +54,8 @@ import { RegularizeAttendanceComponent } from './regularize-attendance/regulariz
           
           SentRequestComponent,
                       RegularizeAttendanceComponent,
+                      AttendanceManagementComponent,
+                      MarkLeaveComponent,
     
     
    
@@ -60,6 +66,8 @@ import { RegularizeAttendanceComponent } from './regularize-attendance/regulariz
     HttpClientModule,
     FormsModule,
     FullCalendarModule,
+    BrowserAnimationsModule,
+    CalendarModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
